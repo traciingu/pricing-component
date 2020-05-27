@@ -1,0 +1,190 @@
+/*
+## Colors
+
+### Primary
+
+- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+
+### Neutral
+
+- Very Light Grayish Blue: hsl(240, 78%, 98%)
+- Light Grayish Blue: hsl(234, 14%, 74%)
+- Grayish Blue: hsl(233, 13%, 49%)
+- Dark Grayish Blue: hsl(232, 13%, 33%)
+*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+body {
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg") no-repeat;
+    background-position: right top, left bottom;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.pricing-option {
+    padding: 15px 0px;
+    margin: 50px auto;
+    text-align: center;
+    width: 90vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px hsl(240, 78%, 98%);
+}
+
+.pricing-option > span {
+    font-size: 4rem;
+}
+
+.pricing-option > *:not(hr) {
+    padding: 15px;
+}
+
+.pricing-option > button {
+    width: 80%;
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    text-transform: uppercase;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.pricing-option > hr {
+    width: 80%;
+    padding: 0px;
+    margin: 0px auto;
+    
+    border-style: solid none none none;
+}
+
+.option-light {
+    background-color: white;
+    color: hsl(232, 13%, 33%);
+}
+
+.option-light > button {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.option-light > button:hover {
+    border: 1px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+    background: inherit;
+}
+
+.option-light > hr {
+    border-color: hsl(234, 14%, 74%);
+}
+
+.option-dark {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.option-dark > button {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.option-dark > button:hover {
+    border: 1px solid white;
+    color: white;
+    background: hsl(237, 63%, 64%);
+}
+
+.option-dark > hr {
+    border-color: hsl(236, 72%, 79%);
+}
+
+.pricing-toggle {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.slider {
+    position: relative;
+    -webkit-appearance: none;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    outline: none;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.slider:before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    top: 4px;
+    left: 6px;
+    background: white;
+    transition: .5s;
+}
+
+.slider:checked:before {
+    left: 65%;
+}
+
+.slider:hover {
+    opacity: 0.7;
+}
+
+.toggle-label {
+    position: relative;
+    bottom: 1vh;
+    padding: 2%;
+    color: hsl(234, 14%, 74%);
+}
+
+.main-title {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: hsl(233, 13%, 49%);
+}
+
+.attribution {
+    margin: 20px auto;
+}
+
+/*
+
+    Desktop Display
+
+*/
+
+@media only screen and (min-width: 751px) {
+    .pricing-option {
+        width: 25vw;
+        margin: auto 0px;
+        box-shadow: unset;
+    }
+
+    .option-dark {
+        padding: 35px 0px; 
+    }
+
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: initial;
+    }
+}
